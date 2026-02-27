@@ -1,7 +1,7 @@
 # Settings and configurations that are common for all containers
 x-minio-common: &minio-common
   build:
-    context: ../../.
+    context: .
     dockerfile: Dockerfile
   command: server --console-address ":9001" http://minio{1...4}/data{1...8}
   expose:
